@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+:root {
+    --color-body: #b6cbce;
+    --color-heading: #dbe3f3;
+    --color-base: darkgrey;
+    --color-base2: black;
+    --color-brand: rgb(124, 124, 241);
+    --color-brand2: rgb(103, 103, 142);
+    --sidbar-width: 240px;
+    --font-base: "Poppins";
+}
+
+body {
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    font-family: var(--font-base), sans-serif;
+}
+p{
+    font-size: 20px;
+}
+h1,h2,h3,h4,h5,h6 {
+    color: var(--color-heading);
+    
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+a:hover {
+    color: var(--color-body);
+}
+
+img {
+    width: 100%;
+}
+
+.text-brand {
+    color: var(--color-brand);
+}
+
+.bg-base {
+    background-color: rgb(46, 44, 44);
+}
+
+.full-height {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgba(255,255,255, 0.1);
+}
+
+.shadow-effect {
+    transition: all 0.5s;
+}
+
+.shadow-effect:hover {
+    box-shadow: -6px 6px 0 0 var(--color-brand);
+}
+
+.iconbox {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: var(--color-base2);
+    color: var(--color-base);
+}
+
+/* NAVBAR */
+.navbar {
+    background: radial-gradient(rgba(18, 18, 31, 0.855),rgba(1, 1, 16, 0.905));
+}
+
+.navbar .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-brand);
+}
+
+.navbar .nav-link.active {
+    color: var(--color-brand);
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        min-height: 100vh;
+        width: var(--sidbar-width);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .navbar-brand img {
+        border: 8px solid white;
+    }
+
+    /* CONTENT WRAPPER */
+    #content-wrapper {
+        padding-left: var(--sidbar-width);
+    }
+}
+@media (max-width:991px) {
+    .navbar-brand img{
+        width: 46px;
+        border: 3px solid white;
+    }
+    
+}
+
+/* BTN */
+.btn {
+    padding: 12px 28px;
+    font-weight: 700;
+}
+
+.btn-brand {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: black;
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+    background-color: var(--color-brand2);
+    color: var(--color-base);
+    border-color: var(--color-brand2);
+}
+
+.link-custom {
+    font-weight: 700;
+    position: relative;
+}
+
+.link-custom::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+
+.link-custom:hover::after {
+    width: 100%;
+}
+
+/* CARD */
+.card-custom .card-custom-image {
+    overflow: hidden;
+}
+
+.card-custom .card-custom-image img {
+    transition: all 0.4s ease;
+}
+
+.card-custom:hover .card-custom-image img {
+    transform: scale(1.1);
+}
+
+/* CONTACT */
+#contact .form-control {
+    background-color: var(--color-base2);
+    border-color: var(--color-base);
+    color: var(--color-body);
+}
+
+#contact .form-control:focus {
+    border-color: var(--color-brand);
+    box-shadow: none;
+}
+
+#contact .form-control::placeholder {
+    color: var(--color-body);
+}
+
+#contact input.form-control {
+    height: 44px;
+}
+
+
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-base2);
+    border-radius: 100px;
+    font-size: 24px;
+}
+.social-icons a:hover{
+    color: #fff;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table
+}
+
+.clearfix:after {
+    clear: both
+}
+
+.timeline-second-style .timeline-item {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    padding-bottom: 15px
+}
+
+.timeline-second-style .timeline-item:last-child {
+    padding-bottom: 0
+}
+
+.timeline-second-style .left-part {
+    width: 30%;
+    display: table-cell;
+    padding-right: 25px;
+    min-height: 100%;
+    text-align: right;
+    vertical-align: top
+}
+
+.timeline-second-style .right-part {
+    width: 70%;
+    display: table-cell;
+    padding-left: 25px;
+    padding-right: 15px;
+    vertical-align: top
+}
+
+.timeline-second-style .right-part p,
+.timeline-second-style .right-part p>* {
+    font-size: .92em
+}
+
+.timeline-second-style .divider {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    bottom: 0;
+    width: 1px;
+    background-color: #eee
+}
+
+.timeline-second-style .divider:before {
+    content: '';
+    display: block;
+    position: absolute;
+    margin-top: 4px;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    margin-left: -8px;
+    border-radius: 10px;
+    background-color: #04b4e0;
+    opacity: .25;
+    z-index: 0
+}
+
+.timeline-second-style .divider:after {
+    content: '';
+    display: block;
+    position: absolute;
+    margin-top: 8px;
+    width: 9px;
+    height: 9px;
+    margin-left: -4px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 2px solid #04b4e0;
+    z-index: 1
+}
+
+.timeline-second-style .item-title {
+    font-size: 16px;
+    margin-bottom: 3px
+}
+
+.timeline-second-style .item-period {
+    margin: 3px 0;
+    font-size: 14px;
+    line-height: 1.4em
+}
+
+.timeline-second-style .item-company {
+    display: block;
+    margin: 0 0 4px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.45em;
+    color: #5b84ae
+}
+
+.timeline-second-style .timeline-item:last-child .right-part {
+    padding-bottom: 0
+}
+
+.timeline-second-style .item-logo {
+    display: block;
+    margin-bottom: 10px
+}
+
+.timeline-second-style .item-logo img {
+    max-height: 40px
+}
+
+.skills-info.skills-second-style {
+    margin-bottom: 30px
+}
+
+.skills-info.skills-second-style h4 {
+    font-size: 13px;
+    line-height: 1.1em;
+    position: relative;
+    float: left;
+    margin: 0 0 4px
+}
+
+.skills-second-style .skill-container {
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid var(--color-brand);
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 10px;
+    margin-bottom: 8px;
+    width: 100%
+}
+
+.skills-second-style .skill-container:before {
+    content: '';
+    position: absolute;
+    background-color: var(--color-base)
+}
+
+.skills-second-style .skill-value {
+    font-size: 11px;
+    line-height: 1.1em;
+    position: relative;
+    float: right;
+    margin: 0 0 4px;
+    color: #aaa
+}
+
+.skills-second-style .skill-percentage {
+    background-color: var(--color-brand);
+    border: 2px solid #fff;
+    -moz-border-radius: 9px;
+    -webkit-border-radius: 9px;
+    border-radius: 9px;
+    height: 8px;
+    padding: 0
+}
+
+.skills-second-style .skill-container.skill-1 .skill-percentage {
+    width: 90%
+}
+
+.skills-second-style .skill-container.skill-2 .skill-percentage {
+    width: 80%
+}
+
+.skills-second-style .skill-container.skill-3 .skill-percentage {
+    width: 85%
+}
+
+.skills-second-style .skill-container.skill-4 .skill-percentage {
+    width: 90%
+}
+
+.skills-second-style .skill-container.skill-5 .skill-percentage {
+    width: 80%
+}
+
+.skills-second-style .skill-container.skill-6 .skill-percentage {
+    width: 70%
+}
+
+.skills-second-style .skill-container.skill-7 .skill-percentage {
+    width: 90%
+}
+
+.skills-second-style .skill-container.skill-8 .skill-percentage {
+    width: 75%
+}
+
+
+.pt-page .skills-second-style .skill-percentage,
+.pt-page .skills-second-style .skill-value {
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+    -ms-transition: all 2s ease-in-out;
+    transition: all 2s ease-in-out
+}
